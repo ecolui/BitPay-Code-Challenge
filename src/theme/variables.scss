@@ -23,13 +23,23 @@ $font-path: "../assets/fonts";
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
+  primary:   lightgray,
+  secondary: darkgray,
+  danger:    pink,
   light:      #f4f4f4,
-  dark:       #222
+  darkest:       #000000,
+  dark : #252525,
+  blatant: yellow
 );
+
+ion-app {font-family: sans-serif}
+$text-color: map-get($colors , light );
+$background-color:map-get($colors , darkest );
+/*$toolbar-background: map-get($colors , dark );
+*/
+$toolbar-background:map-get($colors , light );
 
 
 // App iOS Variables

@@ -6,10 +6,19 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { LogEffortPage } from '../pages/log-effort/log-effort';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { effortReducer  } from '.././reducers/Effort';
+import { selectedEffortReducer } from '.././reducers/SelectedEffort';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NumPadComponent } from '../components/num-pad/num-pad';
+import { EffortComponent } from '../components/effort/effort';
+import { WorkoutComponent } from '../components/workout/workout';
 
 @NgModule({
   declarations: [
@@ -17,11 +26,23 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LogEffortPage,
+    NumPadComponent,
+    EffortComponent,
+    WorkoutComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    StoreModule.provideStore(
+      {
+        effort : effortReducer,
+        selectedEffort : selectedEffortReducer
+      }),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    })  
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,6 +50,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    LogEffortPage,
     TabsPage
   ],
   providers: [

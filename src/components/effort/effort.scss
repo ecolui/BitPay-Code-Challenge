@@ -1,0 +1,26 @@
+$topTextMargin : 10px;
+
+effort {
+            text-align: center;
+            color: map-get($colors , light);
+
+            #log-effort-exercise-type {
+                font-size: 25px;
+                margin-top: $topTextMargin;
+            }
+            #log-effort-exercise-reps{
+                color: map-get($colors , blatant);
+                font-size: 75px;
+                margin-top: $topTextMargin * 2;     
+            }
+            #log-effort-exercise-week-cummulative{
+                margin-top: $topTextMargin * 2;
+                font-size: 16px;
+                #log-effort-exercise-week{
+                    float : left;
+                }
+                #log-effort-exercise-cummulative{
+                    float : right;
+                }
+            }
+}

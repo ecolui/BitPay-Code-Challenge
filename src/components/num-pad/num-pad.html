@@ -1,0 +1,22 @@
+<!-- Generated template for the NumPadComponent component -->
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row *ngFor="let digits of keypad">
+        <ion-col *ngFor="let digit of digits" (click)="pressDigit(digit)">
+          <div>
+          {{digit}}
+          </div>
+        </ion-col>
+      </ion-row>    
+      <ion-row>
+        <ion-col (click)="pressDecimal()"> <div>.</div> </ion-col>
+        <ion-col (click)="pressDigit(0)"> <div>0</div> </ion-col>
+        <ion-col (click)="pressBackSpace()">  
+          <div>
+          <ion-icon name="backspace"></ion-icon>          
+          </div>
+        </ion-col>      
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+

@@ -1,26 +1,20 @@
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
+## BitPay Code Challenge
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Instructions
+Please use angular 4 to build the attached mockup of a numpad. Tapping each number on the numpad should add that number to the display at the top. Feel free to use animations as you see fit. Please publish to a github repository when ready to submit your work.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+### Solution
+I used Ionic 2 (Angular 4) to complete this challenge.  I made sure to isolate the keypad in its own component so that I can reuse it later, if needed.  Also, I use ngrx/store for central state managment (like React Redux).  I'm planning on doing way more with this little tool in the near future, just because it'll probably be fun.  Details of what I'm brainstorming are in the *home* button in the app.
 
 ### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
 ```
 
-Then, to run it, cd into `myTabs` and run:
+Then, to run it, cd into `BitPayChallenge` and run:
+$ ionic serve -lab
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+Thanks you, and enjoy your day!
 

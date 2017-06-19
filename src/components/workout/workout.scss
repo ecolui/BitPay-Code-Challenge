@@ -1,0 +1,12 @@
+workout {
+            #log-effort-exercise-week-cummulative{
+                margin-top: $topTextMargin * 2;
+                font-size: 16px;
+                #log-effort-exercise-week{
+                    float : left;
+                }
+                #log-effort-exercise-cummulative{
+                    float : right;
+                }
+            }
+}

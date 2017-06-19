@@ -1,0 +1,30 @@
+$topTextMargin : 10px;
+
+page-log-effort {
+}
+
+ion-footer{
+        background : map-get($colors , dark );
+        color : map-get($colors , blatant );
+        text-align: center;
+        font-size: 32px;        
+        .col :hover {
+            background: map-get($colors , blatant);
+            color: map-get($colors , darkest );
+        }
+        .col :active {
+            background: red;
+            transition: 1s;
+        }
+        .col :focus {
+            background: green;
+            transition: 1s;
+        }      
+        .col :visited {
+            background:purple;
+            transition: 1s;
+        }
+        img {
+            height: 100%;
+        }
+}

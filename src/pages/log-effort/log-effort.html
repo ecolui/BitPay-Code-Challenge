@@ -1,0 +1,28 @@
+<!--
+  Generated template for the LogEffortPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>logEffort</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <workout #userWorkout></workout>
+</ion-content>
+
+<ion-footer>    
+  <div [style.display]="maxRepsExceeded ? 'inline' : 'none'">
+    <img src="assets/img/giphy.gif" alt="your image">
+  </div>
+  
+  <num-pad *ngIf="!maxRepsExceeded" 
+        [currentNum]="userWorkout.selectedEffort.exerciseEffort.effort" 
+        (lastNum)="updateEffort($event)"></num-pad>
+</ion-footer>
